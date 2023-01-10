@@ -1,7 +1,8 @@
-﻿using System.Net.NetworkInformation;
+﻿using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text.Json;
-using Microsoft.Net.Http.Headers;
+using System.Threading.Tasks;
 
 namespace GeekShopping.Web.Utils
 {

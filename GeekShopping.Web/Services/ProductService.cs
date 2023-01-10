@@ -1,7 +1,10 @@
-﻿using GeekShopping.Web.Models;
-using GeekShopping.Web.Services.IServices;
-using GeekShopping.Web.Utils;
+﻿using System;
 using System.Net.Http;
+using GeekShopping.Web.Utils;
+using System.Threading.Tasks;
+using GeekShopping.Web.Models;
+using System.Collections.Generic;
+using GeekShopping.Web.Services.IServices;
 
 namespace GeekShopping.Web.Services
 {
@@ -48,6 +51,36 @@ namespace GeekShopping.Web.Services
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<bool>();
             else throw new Exception("Something went wrong when calling API");
-        }              
+        }
+
+        Task<IEnumerable<ProductModel>> IProductService.FindAllProducts()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        Task<ProductModel> IProductService.FindProductById(long id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        Task<ProductModel> IProductService.CreateProduct(ProductModel model)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        Task<ProductModel> IProductService.UpdateProduct(ProductModel model)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        Task<bool> IProductService.DeleteProduct(long id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task DeleteProductById(long id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

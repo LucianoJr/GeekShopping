@@ -1,4 +1,6 @@
-﻿using GeekShopping.Web.Models;
+﻿using System.Threading.Tasks;
+using GeekShopping.Web.Models;
+using System.Collections.Generic;
 
 namespace GeekShopping.Web.Services.IServices
 {

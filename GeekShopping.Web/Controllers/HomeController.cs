@@ -1,6 +1,7 @@
-﻿using GeekShopping.Web.Models;
+﻿using System.Diagnostics;
+using GeekShopping.Web.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace GeekShopping.Web.Controllers
 {

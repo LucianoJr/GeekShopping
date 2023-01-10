@@ -1,5 +1,8 @@
-using GeekShopping.Web.Services.IServices;
+using System;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
+using GeekShopping.Web.Services.IServices;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
