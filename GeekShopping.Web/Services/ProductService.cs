@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using GeekShopping.Web.Models;
 using System.Collections.Generic;
 using GeekShopping.Web.Services.IServices;
+using System.Net.Http.Headers;
 
 namespace GeekShopping.Web.Services
 {
@@ -17,70 +18,44 @@ namespace GeekShopping.Web.Services
         {
             _client = client ?? throw new ArgumentNullException(nameof(client));
         }
-
-        public async Task<IEnumerable<ProductModel>> FindAllProducts()
+        public async Task<IEnumerable<ProductModel>> FindAllProducts(string token)
         {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", string token);
             var response = await _client.GetAsync(BasePath);
             return await response.ReadContentAs<List<ProductModel>>();
 
         }
 
-        public async Task<ProductModel> FindProductById(long id)
+        public async Task<ProductModel> FindProductById(long id, string token)
         {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", string token);
             var response = await _client.GetAsync($"{BasePath}/{id}");
             return await response.ReadContentAs<ProductModel>();
         }
-        public async Task<ProductModel> CreateProduct(ProductModel model)
+        public async Task<ProductModel> CreateProduct(ProductModel model, string token)
         {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", string token);
             var response = await _client.PostAsJson(BasePath, model);
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<ProductModel>();
             else throw new Exception("Something went wrong when calling API");
         }
-        public async Task<ProductModel> UpdateProduct(ProductModel model)
+        public async Task<ProductModel> UpdateProduct(ProductModel model, string token)
         {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", string token);
             var response = await _client.PutAsJson(BasePath, model);
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<ProductModel>();
             else throw new Exception("Something went wrong when calling API");
         }
 
-        public async Task<bool> DeleteProduct(long id)
+        public async Task<bool> DeleteProduct(long id, string token)
         {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", string token);
             var response = await _client.DeleteAsync($"{BasePath}/{id}");
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<bool>();
             else throw new Exception("Something went wrong when calling API");
-        }
-
-        Task<IEnumerable<ProductModel>> IProductService.FindAllProducts()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<ProductModel> IProductService.FindProductById(long id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<ProductModel> IProductService.CreateProduct(ProductModel model)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<ProductModel> IProductService.UpdateProduct(ProductModel model)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<bool> IProductService.DeleteProduct(long id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Task DeleteProductById(long id)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

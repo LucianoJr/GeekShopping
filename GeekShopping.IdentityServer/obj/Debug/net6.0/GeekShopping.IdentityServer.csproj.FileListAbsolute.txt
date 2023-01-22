@@ -1,0 +1,9 @@
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.csproj.AssemblyReference.cache
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.AssemblyInfoInputs.cache
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.AssemblyInfo.cs
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.csproj.CoreCompileInputs.cache
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.MvcApplicationPartsAssemblyInfo.cs
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.MvcApplicationPartsAssemblyInfo.cache
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.RazorAssemblyInfo.cache
+C:\dev\GeekShopping\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.RazorAssemblyInfo.cs
